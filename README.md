@@ -14,7 +14,7 @@ cd referenc_dir
 curl -JLO "https://figshare.com/ndownloader/files/49358317?private_link=2d3d4d60a82de9cc3cc6"
 cd ..
 ```
-### I kept the 3 veriables 
+### I kept the 3 variables 
 1. query files
 2. reference files
 3. number of samples to extract/rescale
