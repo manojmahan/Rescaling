@@ -1,0 +1,8 @@
+Building DAG of jobs...
+MissingInputException in rule get_frequency in file /home/mkmahan/Rescaling/main.smk, line 12:
+Missing input files for rule get_frequency:
+    output: freq/query_files.tsv
+    wildcards: query_dir=query_files
+    affected files:
+        shuf.b.bed.gz
+        shuf.a.bed.gz

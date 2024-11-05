@@ -1,0 +1,9 @@
+Building DAG of jobs...
+File path ' subsample/ query_files _subsample_to_ reference_files _sample_ 0 .bed ' starts with whitespace. This is likely unintended. It can also lead to inconsistent results of the file-matching approach used by Snakemake.
+File path ' subsample/ query_files _subsample_to_ reference_files _sample_ 0 .bed ' ends with whitespace. This is likely unintended. It can also lead to inconsistent results of the file-matching approach used by Snakemake.
+MissingInputException in rule plot in file /home/mkmahan/Rescaling/main.smk, line 27:
+Missing input files for rule plot:
+    output: subsample/query_files_subsample_to_reference_files_ewp_1
+    wildcards: query_dir=query_files, reference_dir=reference_files, num_of_samples=1
+    affected files:
+         subsample/ query_files _subsample_to_ reference_files _sample_ 0 .bed 

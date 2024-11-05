@@ -1,0 +1,7 @@
+Building DAG of jobs...
+MissingInputException in rule Rescaling in file /home/mkmahan/Rescaling/main.smk, line 20:
+Missing input files for rule Rescaling:
+    output: subsample/query_files_subsample_to_reference_files_ewp_0.tsv
+    wildcards: query_dir=query_files, referenc_dir=reference_files, number=0
+    affected files:
+        reference.hist

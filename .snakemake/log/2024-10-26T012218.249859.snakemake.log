@@ -1,0 +1,30 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+Rescaling            4              1              1
+get_frequency        1              1              1
+plot                 1              1              1
+total                6              1              1
+
+Select jobs to execute...
+
+[Sat Oct 26 01:22:19 2024]
+rule get_frequency:
+    input: query_files/shuf.a.bed.gz, query_files/shuf.b.bed.gz
+    output: freq/query_files.csv
+    jobid: 2
+    reason: Missing output files: freq/query_files.csv
+    wildcards: query_dir=query_files
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule get_frequency in file /home/mkmahan/Rescaling/main.smk, line 12:
+Job 2  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+freq/query_files.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-10-26T012218.249859.snakemake.log

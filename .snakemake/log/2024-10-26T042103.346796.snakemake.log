@@ -1,0 +1,28 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count    min threads    max threads
+-----  -------  -------------  -------------
+plot         1              1              1
+total        1              1              1
+
+Select jobs to execute...
+
+[Sat Oct 26 04:21:04 2024]
+rule plot:
+    input: subsample/query_files_subsample_to_reference_files_sample_0.bed, reference_files/reference.hist
+    output: subsample/query_files_subsample_to_reference_files_ewp_1
+    jobid: 0
+    reason: Missing output files: subsample/query_files_subsample_to_reference_files_ewp_1
+    wildcards: query_dir=query_files, referenc_dir=reference_files, num_of_samples=1
+    resources: tmpdir=/tmp
+
+Waiting at most 5 seconds for missing files.
+MissingOutputException in rule plot in file /home/mkmahan/Rescaling/main.smk, line 30:
+Job 0 completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+subsample/query_files_subsample_to_reference_files_ewp_1
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-10-26T042103.346796.snakemake.log

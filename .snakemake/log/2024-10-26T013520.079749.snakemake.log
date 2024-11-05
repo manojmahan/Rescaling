@@ -1,0 +1,35 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count    min threads    max threads
+-------------  -------  -------------  -------------
+Rescaling            4              1              1
+get_frequency        1              1              1
+plot                 1              1              1
+total                6              1              1
+
+Select jobs to execute...
+
+[Sat Oct 26 01:35:20 2024]
+rule get_frequency:
+    input: query_files/shuf.a.bed.gz, query_files/shuf.b.bed.gz
+    output: freq/query_files.csv
+    jobid: 2
+    reason: Missing output files: freq/query_files.csv
+    wildcards: query_dir=query_files
+    resources: tmpdir=/tmp
+
+[Sat Oct 26 01:35:28 2024]
+Error in rule get_frequency:
+    jobid: 2
+    input: query_files/shuf.a.bed.gz, query_files/shuf.b.bed.gz
+    output: freq/query_files.csv
+    shell:
+        zcat query_files/shuf.a.bed.gz query_files/shuf.b.bed.gz | python get_frequency.py freq/query_files.csv
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2024-10-26T013520.079749.snakemake.log
